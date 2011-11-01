@@ -1,0 +1,11 @@
+* Ribbon Connect - Web-based home connection application
+*
+* author: falldeaf
+* date:   November 1, 2011
+*
+-------------------------------------------
+
+Installation: deposit files into any web accesible directory
+
+Note - There's currently no access restrictions. It would be advisable 
+to create an .htaccess to password protect the directory

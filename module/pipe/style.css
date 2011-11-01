@@ -1,0 +1,15 @@
+div.jp-volume-bar 
+{
+	top:37px;
+	background-color:black;
+	width:250px;
+	height:10px;
+	cursor: pointer;
+	border:1px solid red;
+}
+
+div.jp-volume-bar-value {
+	background-color:white;
+	width:0px;
+	height:10px;
+}

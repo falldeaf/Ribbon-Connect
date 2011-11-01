@@ -1,0 +1,290 @@
+.dotted_container
+{
+	border:1px dotted #fff;
+	width:99%;
+	padding:3px 0px 3px 0px;
+	margin:4px 0px 4px 0px;
+}
+
+.tiny_text_description
+{
+	margin:0px
+	padding:0px;
+	height:30px;
+	font-size:12;
+	display:inline-block;
+}
+
+.tiny_text_control
+{
+	margin:0px
+	padding:0px;	
+	width:30px;
+	height:30px;
+	font-size:12;
+	display:inline-block;
+	cursor: pointer;
+}
+
+.tab_content
+{
+	width:100%;
+}
+
+.tab_box
+{
+	width:100%;
+	border-bottom:1px #FFF solid;
+	margin-top:6px;
+	margin-bottom:6px;
+}
+
+.tab
+{
+	display:inline-block;
+	height:20px;
+	width:50px;
+	vertical-align:middle;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	margin:0px;
+	padding:2px;
+	background: -webkit-gradient(linear, 0 0, 0 50%, from(#666), to(#000));
+	
+	border-top:2px #FFF solid;
+	border-left:2px #FFF solid;
+	border-right:2px #FFF solid;
+	cursor:pointer;
+	font-size:14;
+}
+
+.message_box
+{
+	display:none;
+	margin-top:15px;
+	margin-bottom:15px;
+	
+	padding:8px;
+
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+
+	border:2px #000 solid;
+	background-color:rgba(0,0,0, .5);
+	height:40px;
+}
+
+.field_label
+{
+	display:inline-block;
+	border-right:dotted 1px #fff;
+	width:100px;
+}
+
+.button_small
+{
+	/* don't highlight */
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	/* Rounded corners */
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	
+	border: 1px solid white;
+	/* Multiple border colors in Gecko */
+	-moz-border-top-colors: #292929 white;
+	-moz-border-right-colors: #292929 white;
+	-moz-border-bottom-colors: #292929 white;
+	-moz-border-left-colors: #292929 white;
+	/* Compensate for Webkit. Not as nice, but works. */
+	-webkit-box-shadow: 0 -1px 2px #292929;
+	/* Background subtle gradient, with fallback to solid color */
+	background: #e3e3e3;
+	background: -moz-linear-gradient(top, #666, #000);
+	background: -webkit-gradient(linear, 0 0, 0 50%, from(#666), to(#000));
+
+	color:#DDD;
+	width:50px;
+	margin:3px;
+	padding:3px;
+	display:inline-block;
+	cursor: pointer;
+	-webkit-box-shadow: -1px -1px 2px #292929;
+}
+
+.button_large
+{
+	/* don't highlight */
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	/* Rounded corners */
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 2px solid white;
+	/* Multiple border colors in Gecko */
+	-moz-border-top-colors: #292929 white;
+	-moz-border-right-colors: #292929 white;
+	-moz-border-bottom-colors: #292929 white;
+	-moz-border-left-colors: #292929 white;
+	/* Compensate for Webkit. Not as nice, but works. */
+	-webkit-box-shadow: 0 -1px 2px #292929;
+	/* Background subtle gradient, with fallback to solid color */
+	background: #e3e3e3;
+	background: -moz-linear-gradient(top, #666, #000);
+	background: -webkit-gradient(linear, 0 0, 0 50%, from(#666), to(#000));
+
+	color:#FFF;	
+	width:50px;
+	margin:3px;
+	padding:8px;
+	display:inline-block;
+	cursor: pointer;
+}
+
+.rounded
+{
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;	
+
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;	
+}
+
+div.load-bar-background 
+{
+	top:37px;
+	background: -moz-linear-gradient(top, #000, #222);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(#555));
+	border-top:2px solid #444;
+	width:100%;
+	height:30px;
+	cursor: pointer;
+}
+
+div.load-bar-background-value {
+	background: -moz-linear-gradient(top, #FFF, #DDD);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#FFF), to(#DDD));
+	width:0px;
+	height:30px;
+}
+
+div.load-small-bar-background 
+{
+	top:37px;
+	background: -moz-linear-gradient(top, #000, #222);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(#555));
+	border-top:2px solid #444;
+	width:100%;
+	height:10px;
+	display:inline-block;
+}
+
+div.load-small-bar-background-value {
+	background-color:#FF0000;
+	width:0px;
+	height:10px;
+}
+
+#loader{
+	margin-top:30px;
+	float:left;
+	background-color:#779ec2;
+	margin-left:30px;
+	/* CSS3 Border  Radius for rounded corner */
+	-webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.coloumns{
+	background-color:#000;
+	border:1px solid #fff;
+	float:left;
+	height:30px;
+	margin-left:5px;
+	width:10px;
+	/* Here we will define an animation name and then we will animate it later */
+	-webkit-animation-name: animation;
+	/* total time for animation to complete one cycle */
+ 	-webkit-animation-duration: 3s;
+	/* Number of loops for animation cycle we set it infinite */
+ 	-webkit-animation-iteration-count: infinite;
+ 	-webkit-animation-direction: linear;
+	/* Initially the opacity of coloumns is zero */
+	opacity:0;
+	/* Scale it to 0.8 in starting */
+	-webkit-transform:scale(0.8);
+	}
+#coloumn1{
+	/* Coloumn1 animation delay by .3 seconds */
+ 	-webkit-animation-delay: .3s;
+ }
+#coloumn2{
+	/* Coloumn2 animation delay by .4 seconds */
+ 	-webkit-animation-delay: .4s;
+}
+#coloumn3{
+	/* Coloumn3 animation delay by .5 seconds */
+ 	-webkit-animation-delay: .5s;
+}
+#coloumn4{
+	/* Coloumn4 animation delay by .6 seconds */
+ 	-webkit-animation-delay: .6s;
+ }
+#coloumn5{
+	/* Coloumn5 animation delay by .7 seconds */
+ 	-webkit-animation-delay: .7s;
+}
+#coloumn6{
+	/* Coloumn6 animation delay by .8 seconds */
+ 	-webkit-animation-delay: .8s;
+}
+/* Earlier we have defined animation-name as animation now the animation properties will set here */
+@-webkit-keyframes animation{
+	/* opacity of coloumn will be 0 at beginning of animation */
+	0%{opacity:0;}
+	/* opacity of coloumn will be 1 at middle of animation */
+	50%{opacity:1;}
+	/* Back to opacity zero when animation completes its cycle */
+	100%{opacity:0;}
+}
+
+div.jp-playlist-player div.jp-playlist li{
+	padding:4px 0 4px 0;
+	border-bottom:1px solid #eee;
+	cursor: pointer;
+}
+div.jp-playlist-player div.jp-playlist li.jplayer_playlist_current {
+	color:#0d88c1;
+	list-style-type:square;
+	list-style-position:inside;
+	padding-left:6px;
+	cursor: default;
+}
+div.jp-playlist-player div.jp-playlist li:hover {
+	color:#0d88c1;
+}
+
+div.jp-playlist 
+{
+	overflow-y:visible;
+	overflow-x:hidden;
+	width:100%;
+	height:400px;
+}
+
+div.jp-playlist ul{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+	width:100%;
+	font-size:.72em;
+}

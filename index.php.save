@@ -1,0 +1,153 @@
+<html>
+<head>
+
+<style>
+
+body
+{
+	margin:0px;
+	padding:0px;
+	background-color:#000;
+	background-image: url('wallpaper.jpg');
+	background-repeat: repeat-y;
+	background-position: center top;
+}
+
+#center_column
+{
+	font-family:arial;
+	margin:0px auto;
+	padding:5px;
+	background-color:rgba(255,255,255, .2);
+	height:100%;
+	width:300px;
+}
+
+.module_container
+{
+	margin:0px 0px 3px 0px;
+	padding:0px;
+}
+
+.module_header
+{
+	background: -moz-linear-gradient(top, #990099, #FF00FF);
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#990099), to(#FF00FF));
+
+	border:1px solid black;
+	width:298px;
+	height:90px;
+
+	margin:0px;
+	padding:0px;
+}
+
+.module_header_layer
+{
+	background: -moz-linear-gradient(top, #FF00FF, #990099);
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#FF00FF), to(#990099));
+
+	border:1px solid black;
+	height:76px;
+	width:272px;
+
+	padding:4px;
+	margin-top:2px;
+	margin-bottom:2px;
+	margin-left:8px;
+	margin-right:8px;
+}
+
+.module_header_center
+{
+	background-image: url('shine.png');
+
+	height:76px;
+	width:272px;
+
+	margin:0px;
+	padding:0px;
+}
+
+.module_stat
+{
+	float:left;
+	height:76px;
+	width:70px;
+
+	margin:0px;
+	padding:0px;
+}
+
+.module_title
+{
+	float:left;
+	font-size:50px;
+	
+	height:76px;
+	width:155px;
+
+	margin:0px;
+	padding:0px;
+}
+
+.module_collapse
+{
+	color:#333;
+	font-size:60px;
+	float:left;
+	height:76px;
+	width:35px;
+
+	margin:0px;
+	margin-left:8px;
+	padding:0px;
+}
+
+.module_body
+{
+	background: -moz-linear-gradient(top, #FF00FF, #990099);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#FF00FF), to(#990099));
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px;
+	border:1px solid black;
+	height:500px;
+	width:290px;
+	padding:4px;
+	margin:5px 0px;
+}
+
+.clearing
+{
+	clear:both;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="center_column">
+
+	<div id="box1" class="module_container">
+		<div id="module_header_1" class="module_header">
+			<div id="module_header_layer_1" class="module_header_layer">
+			<div id="module_header_center_1" class="module_header_center">
+				<div class="module_stat"> </div>
+				<div class="module_title"> VIDEO </div>
+				<div class="module_collapse"> + </div>
+				<div class="clearing"></div>
+			</div>
+			</div>
+		</div> 
+		<div id="module_body1"  class="module_body">
+			lkdsj flsdj fsdlfjsdlj fsldjf sdlj fsldjf sldj fsdlj fsdlkj fsdlkj fsdlk jfslkdj fsdlkj fsldkjf lsdkjflsdjlsdjkf lsdk jfsljflsdjkfs ldkjfsldkjfsldj fsljfsdljkfsdljfsldk jfslkdjfsldkjfsl kdjfsdljfsldj fsdlkjfsldkjfs dlkjfdslj  sdl jfsdl jsl jsl jsdfl jsdl j
+		</div>
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>

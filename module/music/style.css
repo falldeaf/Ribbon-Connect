@@ -1,0 +1,26 @@
+div.jp-volume-bar 
+{
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;	
+
+	top:37px;
+	background-color:black;
+	width:250px;
+	height:10px;
+	cursor: pointer;
+	border:1px solid red;
+}
+
+div.jp-volume-bar-value {
+	
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;	
+	
+	background-color:white;
+	width:0px;
+	height:10px;
+}

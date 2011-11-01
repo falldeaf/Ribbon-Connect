@@ -1,0 +1,148 @@
+
+Remote Control Interface
+From DevWiki
+Jump to: navigation, search
+
+Back to Home
+Contents
+[hide]
+
+    * 1 Remote Control Interface
+          o 1.1 Discovery Request
+          o 1.2 Discovery Response
+          o 1.3 Sending Commands
+
+
+Remote Control Interface
+
+Boxee has a web interface that you use to build your own custom remote control interface. The web interface is built on top of the XBMC web interface with some custom boxee stuff.
+
+Important: The web interface is very old and will be changed in the future. We are aware that the interface is not easy to use and the response are difficult to parse. We apologize for that.
+
+Discovery: In order to discover running boxee applications in your local network, you will need to send a broadcast over your LAN. Running boxee applications will respond to that broadcast if it is properly signed. We have not decided at this point not to rely on ZeroConf, Bonjour or other technologies but rather build a very simple interface to anwer that need.
+
+
+Discovery Request
+
+Send the following packet to discover which boxee applications are running in your local network. Discovery requests should be broadcasted to UDP port 2562.
+
+Request structure:
+
+<?xml version="1.0"?>
+<BDP1 cmd="discover" application="<Client Application Name>" 
+version="<Application Version>" challenge="<randomdigits>" 
+signature="<MD5HEX(randomdigits+shared_key)>"/>
+
+Attributes
+
+    * cmd Must have the value discover
+    * application Must have the value iphone_remote. This will change in the future.
+    * version Version of the remote application
+    * challenge Any string. This string will later be used by the boxee client to sign the response.
+    * signature Hex string which is the result of MD5 with the input of the challenge value concatenated with the shared key. The shared key string to use must be b0xeeRem0tE!. This will change in the future. 
+
+
+Discovery Response
+
+Once boxee receives the request, it verifies the signature and sends a response. The remote application must verify the signature of the response.
+
+Response structure:
+
+<?xml version="1.0"?>
+<BDP1 cmd="found" application="boxee" 
+version="<version>" name="<host name>" response="<randomdigits>"
+httpPort="<port_nubmer>" httpAuthRequired="<true|false>"
+signature="<MD5HEX(randomdigits+shared_key)>"/>
+
+Attributes
+
+    * application Must have the value boxee.
+    * version Version of boxee
+    * name Name of the host running boxee
+    * httpPort TCP port of the web server embedded in boxee
+    * httpAuthRequired Either true or false, depending wheter a password is defined for web access.
+    * response Any string. This string will later be used by the application client to verify the response.
+    * signature Hex string which is the result of MD5 with the input of the response value concatenated with the shared key. The shared key string to use must be b0xeeRem0tE!. This will change in the future. 
+
+
+Sending Commands
+
+After discovery is done, the remote application can send HTTP requests to the boxee embedded web server. The requests should be sent to the TCP port returned during discovery.
+
+The commands accepted by boxee are . Please note that due to changes in boxee, not all requests defined by XBMC are working properly. The web server reponsds in a mixture of XML and HTTP. This will be changed in the future as noted at the beginning.
+
+All requests going to the boxee web server should go to the following URL:
+
+http://host:port/xbmcCmds/xbmcHttp?command=<command>(<parameters>)
+
+
+Commands
+
+    * GetVolume Retrieves the current volume setting as a percentage of the maximum possible value.
+    * SetVolume(percent) Sets the volume as a percentage of the maximum possible.
+    * Mute Toggles the sound on/off.
+    * Pause Pauses the currently playing media.
+    * Stop Stops the currently playing media.
+    * PlayNext Starts playing/showing the next media/image in the current playlist or, if currently showing a slidshow, the slideshow playlist.
+    * PlayPrev Starts playing/showing the previous media/image in the current playlist or, if currently showing a slidshow, the slideshow playlist.
+    * Mute Toggles the sound on/off.
+    * SeekPercentage(percent) Sets the playing position of the currently playing media as a percentage of the media’s length.
+    * SeekPercentageRelative(relative-percentage) Adds/Subtracts the current percentage on to the current postion in the song
+    * GetPercentage Retrieves the current playing position of the currently playing media as a percentage of the media’s length. 
+
+
+Below is a partial list of the commands for sending actions / keystrokes:
+
+    * SendKey(270) Click on UP button
+    * SendKey(271) Click on DOWN button
+    * SendKey(272) Click on LEFT button
+    * SendKey(273) Click on RIGHT button
+    * SendKey(275) Click on BACK button
+    * SendKey(61704) Sends an backspace key (used in keyboard)
+    * SendKey(<ASCII value + 61696>) Sends an ASCII key (used in keyboard) 
+
+
+Below is a list of commands added by boxee:
+
+    * getKeyboardText Returns whether a virtual keyboard is active, whether it has hidden text and the actual text in the keyboard. 
+
+Retrieved from "http://developer.boxee.tv/Remote_Control_Interface"
+Views
+
+    * Page
+    * Discussion
+    * View source
+    * History
+
+Personal tools
+
+    * Log in
+
+Navigation
+
+    * Main Page
+    * Community portal
+    * Current events
+    * Recent changes
+    * Random page
+    * Help
+
+Search
+ 
+Toolbox
+
+    * What links here
+    * Related changes
+    * Special pages
+    * Printable version
+    * Permanent link
+
+Powered by MediaWiki
+
+    * This page was last modified on 21 December 2009, at 18:13.
+    * This page has been accessed 4,609 times.
+    * Privacy policy
+    * About DevWiki
+    * Disclaimers
+
+
